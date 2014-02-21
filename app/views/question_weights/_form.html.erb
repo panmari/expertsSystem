@@ -1,0 +1,29 @@
+<%= form_for(@question_weight) do |f| %>
+  <% if @question_weight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question_weight.errors.count, "error") %> prohibited this question_weight from being saved:</h2>
+
+      <ul>
+      <% @question_weight.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :expert_id %><br>
+    <%= f.number_field :expert_id %>
+  </div>
+  <div class="field">
+    <%= f.label :question_id %><br>
+    <%= f.number_field :question_id %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

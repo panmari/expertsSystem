@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Expert:</strong>
+  <%= @question_weight.expert_id %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @question_weight.question_id %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @question_weight.weight %>
+</p>
+
+<%= link_to 'Edit', edit_question_weight_path(@question_weight) %> |
+<%= link_to 'Back', question_weights_path %>

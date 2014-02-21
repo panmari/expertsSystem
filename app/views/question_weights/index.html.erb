@@ -1,0 +1,31 @@
+<h1>Listing question_weights</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Expert</th>
+      <th>Question</th>
+      <th>Weight</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @question_weights.each do |question_weight| %>
+      <tr>
+        <td><%= question_weight.expert_id %></td>
+        <td><%= question_weight.question_id %></td>
+        <td><%= question_weight.weight %></td>
+        <td><%= link_to 'Show', question_weight %></td>
+        <td><%= link_to 'Edit', edit_question_weight_path(question_weight) %></td>
+        <td><%= link_to 'Destroy', question_weight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question weight', new_question_weight_path %>

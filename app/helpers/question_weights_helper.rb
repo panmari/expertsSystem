@@ -1,0 +1,2 @@
+module QuestionWeightsHelper
+end
