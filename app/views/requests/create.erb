@@ -1,0 +1,14 @@
+<h1>Ask a question</h1>
+
+<%= form_for :request do |f| %>
+    <%= f.label :search %>
+    <%= f.text_field :search %>
+<% end %>
+
+<% if @expert_scores %>
+<ol>
+<% @expert_scores.each do |expert_id, score| %>
+        <li><%= Expert.find(expert_id).name %>: <%= score %> </li>
+<% end %>
+</ol>
+<% end %>

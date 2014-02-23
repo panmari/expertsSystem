@@ -81,6 +81,7 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    ruby-stemmer (0.9.3)
     sass (3.2.14)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -124,6 +125,7 @@ DEPENDENCIES
   pg
   rails (= 4.0.3)
   rails_12factor
+  ruby-stemmer
   sass-rails (~> 4.0.0)
   sdoc
   turbolinks
