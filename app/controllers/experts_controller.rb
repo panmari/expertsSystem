@@ -11,7 +11,9 @@ class ExpertsController < ApplicationController
   # GET /experts/1.json
   def show
     r = RequestHandler.new
-    @chart = r.make_data_table_for(@expert.id)
+    data_table = r.make_data_table_for(@expert.id)
+    opts = { :width =>800, :height => 600, :title => 'Histogram of frequencies' }
+    @chart = GoogleVisualr::Interactive::ColumnChart.new(data_table, opts)
   end
 
   # GET /experts/new

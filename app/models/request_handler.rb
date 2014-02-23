@@ -45,8 +45,7 @@ class RequestHandler
     @expert_histograms[expert_id].each do |term, freq|
       data_table.add_row [term, apply_weights(term, freq)]
     end
-    opts   = { :width =>800, :height => 600, :title => 'Histogram of frequencies' }
-    GoogleVisualr::Interactive::ColumnChart.new(data_table, opts)
+    data_table
   end
 
   private
