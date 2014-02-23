@@ -10,6 +10,8 @@ class ExpertsController < ApplicationController
   # GET /experts/1
   # GET /experts/1.json
   def show
+    r = RequestHandler.new
+    @chart = r.make_data_table_for(@expert.id)
   end
 
   # GET /experts/new

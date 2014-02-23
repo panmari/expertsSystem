@@ -7,6 +7,9 @@ gem 'rails', '4.0.3'
 # used for nlp
 gem 'ruby-stemmer'
 
+# google
+gem 'google_visualr'
+
 # Use mysql as the database for Active Record
 gem 'mysql2'
 
