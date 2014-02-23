@@ -15,7 +15,13 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
-  <div class="actions">
+    <%= f.fields_for :questions do |builder| %>
+        <div class="field">
+        <%= builder.label :text, "Question" %>
+        <%= builder.text_field :text %>
+        </div>
+    <% end %>
+      <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

@@ -15,6 +15,7 @@ class ExpertsController < ApplicationController
   # GET /experts/new
   def new
     @expert = Expert.new
+    3.times { @expert.questions.build }
   end
 
   # GET /experts/1/edit
@@ -69,6 +70,6 @@ class ExpertsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def expert_params
-      params.require(:expert).permit(:name)
+      params.require(:expert).permit(:name, :questions_attributes => [:text])
     end
 end

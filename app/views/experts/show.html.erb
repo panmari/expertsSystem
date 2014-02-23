@@ -5,5 +5,15 @@
   <%= @expert.name %>
 </p>
 
+<p>
+  <strong>Questions:</strong>
+  <ul>
+    <% @expert.questions.each do |question| %>
+        <li><%= question.text %> </li>
+    <% end %>
+  </ul>
+
+</p>
+
 <%= link_to 'Edit', edit_expert_path(@expert) %> |
 <%= link_to 'Back', experts_path %>
