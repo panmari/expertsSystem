@@ -35,6 +35,14 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :production do
+  #Heroku uses a postgresql db
+  gem 'pg'
+  #For serving static content on heroku
+  gem 'rails_12factor'
+end
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
