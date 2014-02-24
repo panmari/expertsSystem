@@ -3,6 +3,7 @@
 <%= form_for :request do |f| %>
     <%= f.label :search %>
     <%= f.text_field :search %>
+    <%= f.submit 'Search' %>
 <% end %>
 
 <% if @expert_scores %>

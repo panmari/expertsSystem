@@ -10,18 +10,17 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :expert_id %><br>
-    <%= f.number_field :expert_id %>
-  </div>
+    <div class="field">
+      <%= f.label :expert_id %><br>
+      <%= f.collection_select :expert_id, Expert.all, :id, :name %>
+    </div>
   <div class="field">
     <%= f.label :question_id %><br>
-    <%= f.number_field :question_id %>
+    <%= f.collection_select :question_id, Question.all, :id, :text %>
   </div>
   <div class="field">
     <%= f.label :weight %><br>
-    <%= f.text_field :weight %>
+    <%= f.select :weight, (1..10)%>
   </div>
   <div class="actions">
     <%= f.submit %>

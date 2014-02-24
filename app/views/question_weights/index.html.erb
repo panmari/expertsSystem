@@ -15,8 +15,8 @@
   <tbody>
     <% @question_weights.each do |question_weight| %>
       <tr>
-        <td><%= question_weight.expert_id %></td>
-        <td><%= question_weight.question_id %></td>
+        <td><%= Expert.find(question_weight.expert_id).name %></td>
+        <td><%= Question.find(question_weight.question_id).text %></td>
         <td><%= question_weight.weight %></td>
         <td><%= link_to 'Show', question_weight %></td>
         <td><%= link_to 'Edit', edit_question_weight_path(question_weight) %></td>
